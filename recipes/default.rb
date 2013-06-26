@@ -1,7 +1,8 @@
 # Chef Server Webapp
 # ==================
 
-node.override['chef-server']['configuration']['nginx']['ssl_port'] = "127.0.0.1:#{node['chef-server']['webapp']['backend_https_port']}"
+node.override['chef-server']['configuration']['nginx']['non_ssl_port'] = node['chef-server']['webapp']['backend_http_port']
+node.override['chef-server']['configuration']['nginx']['ssl_port'] = node['chef-server']['webapp']['backend_https_port']
 
 include_recipe 'chef-server'
 include_recipe 'apache2'

@@ -1,7 +1,5 @@
 # -*- conf -*-
 
-<% chef_server = Chef::JSONCompat.from_json(File.open('/etc/chef-server/chef-server-running.json')) -%>
-
 <% if node['chef-server']['webapp']['ssl_key_path'] -%>
 <VirtualHost *:80>
   ServerName <%= node['chef-server']['api_fqdn'] %>
