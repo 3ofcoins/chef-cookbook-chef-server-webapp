@@ -15,6 +15,9 @@
 <VirtualHost *:443>
   SSLEngine on
   SSLCertificateFile <%= node['chef-server']['webapp']['ssl_certificate_path'] %>
+<% if node['chef-server']['webapp']['ssl_certificate_chain_path'] -%>
+  SSLCertificateChainFile <%= node['chef-server']['webapp']['ssl_certificate_chain_path'] %>
+<% end -%>
   SSLCertificateKeyFile <%= node['chef-server']['webapp']['ssl_key_path'] %>
 
 <% else -%>

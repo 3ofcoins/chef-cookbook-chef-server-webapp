@@ -33,7 +33,8 @@ Attributes
 
  - `chef-server.webapp.backend_https_port` -- port to configure
    omnibus chef server's nginx to listen on; default is 17443
- - `chef-server.webapp.ssl_key_path` and
+ - `chef-server.webapp.ssl_key_path`,
+   `chef-server.webapp.ssl_certificate_chain_path` (optional), and
    `chef-server.webapp.ssl_certificate_path` -- HTTPS keys.
 
 Recipes

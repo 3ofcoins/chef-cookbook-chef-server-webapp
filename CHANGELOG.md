@@ -1,6 +1,10 @@
 Change History
 ==============
 
+0.1.3
+-----
+ - Support SSL certificate chain file
+
 0.1.2
 -----
  - Correctly set nginx' and bookshelf's URL
